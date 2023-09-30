@@ -7,7 +7,7 @@ Malkiel proposed five theorems that govern the price of fixed-income debt securi
 > Theorem 5: The higher the coupon carried by the bond, the smaller the percentage price fluctuation for a given change in yield
 
 ### Team
-List the members of your team here.
+`PS1` can be done in teams. List the members of your team here.
 
 ## Problem Statement
 We selected a `T = 30-year` United States Treasury bond that was auctioned off on `08/10/23` and issued on `08/15/2023` to test Theorem 5. The bond had the following characteristics:
