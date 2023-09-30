@@ -1,4 +1,4 @@
-# PS1-CHEME-5660-FixedIncomeCalculations-Fall-2023
+# PS1 CHEME-5660 Fall 2023
 The objective of `PS1` is to familiarize students with computing the prices of Treasury Bills, Notes, and Bonds and to compare simulations of the change in the prices of these instruments with the five theorems proposed by Malkiel:
 
 * [Malkiel, B. G. (1962). Expectations, Bond Prices, and the Term Structure of Interest Rates. The Quarterly Journal of Economics, 76(2), 197–218. https://doi.org/10.2307/1880816](https://www.jstor.org/stable/1880816https://www.jstor.org/stable/1880816)
