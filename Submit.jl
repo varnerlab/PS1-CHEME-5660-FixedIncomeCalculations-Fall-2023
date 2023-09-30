@@ -37,7 +37,7 @@ function main()::Array{Float64, 2}
             β_value_inner = β[j];
             copy_of_nominal_coupon_bond_model.rate = nominal_coupon_bond_model.rate * β_value_inner;
             pertubed_price = copy_of_nominal_coupon_bond_model |> discount_model |> x-> x.price;
-            results_array[i, j] = (pertubed_price - nominal_price) / nominal_price;
+            results_array[i, j] = round(100*(pertubed_price - nominal_price) / nominal_price, digits=2);
         end
     end
 
@@ -47,3 +47,27 @@ end
 
 # run the main method, store the results in the simulation_results_array -
 simulation_results_array = main();
+
+# build a pretty table to display the results -
+(R,C) = size(simulation_results_array)
+pretty_table_data = Array{Any,2}(undef, R, C+1)
+
+# first col holds labels -
+for i ∈ 1:R
+    if (i == 1)
+        pretty_table_data[i,1] = "-20% coupon";
+    elseif (i == 3)
+        pretty_table_data[i,1] = "+20% coupon";
+    else
+        pretty_table_data[i,1] = "nominal coupon";
+    end
+end
+
+for i = 1:R
+    for j = 1:C
+        pretty_table_data[i,j+1] = simulation_results_array[i,j]
+    end
+end
+
+header_data = (["", "-20% yield", "nominal yield", "+20% yield"])
+pretty_table(pretty_table_data, header=header_data, tf=tf_markdown)

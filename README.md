@@ -28,4 +28,13 @@ Once the Julia REPL starts, execute the following command:
 include("Submit.jl")
 ```
 
-Your job is to complete the implementation of the `main(...)` function in the `Submit.jl` file, and analyze the results.
+Your job is to complete the implementation of the `main(...)` function in the `Submit.jl` file, and analyze the results. Once complete, you can submit your assignment by checking in your changes to your local git repository and pushing your changes to the remote repository.
+
+## Results
+The code will produce a `3`$\times$`3` grid of percentage price changes for the bond for $\pm~20\%$ changes in the coupoun rate (rows) and yeild (columns). The results should look __something__ like the following:
+
+|                | -20% yield | nominal yield | +20% yield |
+|----------------|------------|---------------|------------|
+|    -20% coupon |       0.12 |        -14.17 |      -25.8 |
+| nominal coupon |      15.83 |           0.0 |     -12.95 |
+|    +20% coupon |      31.54 |         14.17 |       -0.1 |
