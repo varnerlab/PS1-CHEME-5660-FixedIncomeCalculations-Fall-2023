@@ -10,13 +10,13 @@ Malkiel proposed five theorems that govern the price of fixed-income debt securi
 List the members of your team here.
 
 ## Problem Statement
-We selected a `T = 30-year` United States Treasury bond that was auctioned off on `08/10/23` and issued on `08/15/2023` that had the following characteristics:
-* The `T = 30 year` bond had an interest rate of `0.04125`, a yield of `0.04189` and a price per $100 face value of `98.912672`.
+We selected a `T = 30-year` United States Treasury bond that was auctioned off on `08/10/23` and issued on `08/15/2023` to test Theorem 5. The bond had the following characteristics:
+* The `T = 30-year` bond had an interest rate of `0.04125`, a yield of `0.04189`, and a price per $100 face value of `98.912672`.
 
-Simulate the price of the bond for the next for $\pm~20\% changes in the coupoun rate and yeild. Does the simulation support Theorem 5?
+Simulate the bond price for the next for $\pm~20\% changes in the coupon rate and yield. Does the simulation support Theorem 5?
 
 ### Implementation
-The implementation of the simulation is in the the `main(...)` function in the `Submit.jl` file. To execute the simulation, Start [Julia]() from the command line (in the directory where the `Submit.jl` file is located):
+The simulation implementation is in the `main(...)` function in the `Submit.jl` file. To execute the simulation, Start [Julia]() from the command line (in the directory where the `Submit.jl` file is located):
 
 ```zsh
 julia --project=.
@@ -28,13 +28,26 @@ Once the Julia REPL starts, execute the following command:
 include("Submit.jl")
 ```
 
-Your job is to complete the implementation of the `main(...)` function in the `Submit.jl` file, and analyze the results. Once complete, you can submit your assignment by checking in your changes to your local git repository and pushing your changes to the remote repository.
+Your job is to complete the implementation of the `main(...)` function in the `Submit.jl` file and analyze the results. 
 
 ## Results
-The code will produce a `3`$\times$`3` grid of percentage price changes for the bond for $\pm~20\%$ changes in the coupoun rate (rows) and yeild (columns). The results should look __something__ like the following:
+The code will produce a `3`$\times$`3` grid of percentage price changes for the bond for $\pm~20%$ changes in the coupon rate (rows) and yield (columns). Your results should look __something__ like the following (your numbers may be different):
 
 |                | -20% yield | nominal yield | +20% yield |
 |----------------|------------|---------------|------------|
 |    -20% coupon |       0.12 |        -14.17 |      -25.8 |
 | nominal coupon |      15.83 |           0.0 |     -12.95 |
 |    +20% coupon |      31.54 |         14.17 |       -0.1 |
+
+## Submission
+Once complete, you can submit your assignment by checking your changes to your local git repository and pushing your changes to the remote repository. All can be done with a few clicks in the [GitHub Desktop](https://desktop.github.com) application. 
+
+## Grading
+The grading rubric will be posted on Canvas.
+
+## Help
+`PS1` is a challenging assignment. If you are stuck, please ask for help. You can ask questions in class, post questions on the `Discussion` forum for the course, or email the instructor or TAs. Specific resources:
+* If you are having code/GitHub issues, check out the [Julia documentation](https://docs.julialang.org/en/v1/) or the [GitHub Desktop documentation](https://docs.github.com/en/desktop).
+* In `PS1`, you have to work with `Arrays` in `Julia`. Check out the [Julia documentation](https://docs.julialang.org/en/v1/base/arrays/) for more information.
+* In `PS1`, you have to work with `Loops` in `Julia`. Check out the [Julia documentation](https://docs.julialang.org/en/v1/manual/control-flow/#man-loops-1) for more information.
+* Another hint, check out the [deepcopy function](https://docs.julialang.org/en/v1/base/copy/#Base.deepcopy) in `Julia`.

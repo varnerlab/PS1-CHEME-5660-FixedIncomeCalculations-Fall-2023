@@ -25,21 +25,8 @@ function main()::Array{Float64, 2}
     # nominal price -
     nominal_price = nominal_coupon_bond_model.price;
 
-    # main loop
-    for i ∈ eachindex(β)
-        
-        β_value_outer = β[i];
-        copy_of_nominal_coupon_bond_model = deepcopy(nominal_coupon_bond_model);
-        copy_of_nominal_coupon_bond_model.coupon = nominal_coupon_bond_model.coupon * β_value_outer;
-        
-        for j ∈ eachindex(β)
-
-            β_value_inner = β[j];
-            copy_of_nominal_coupon_bond_model.rate = nominal_coupon_bond_model.rate * β_value_inner;
-            pertubed_price = copy_of_nominal_coupon_bond_model |> discount_model |> x-> x.price;
-            results_array[i, j] = round(100*(pertubed_price - nominal_price) / nominal_price, digits=2);
-        end
-    end
+    # TODO: main loop. You need to loop over the perturbation values and compute the price of the bond, 
+    # store the percentage changes in the price in the results array.
 
     # return -
     return results_array;
@@ -70,4 +57,4 @@ for i = 1:R
 end
 
 header_data = (["", "-20% yield", "nominal yield", "+20% yield"])
-pretty_table(pretty_table_data, header=header_data, tf=tf_markdown)
+pretty_table(pretty_table_data, header=header_data)
