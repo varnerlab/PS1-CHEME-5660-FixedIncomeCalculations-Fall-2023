@@ -4,7 +4,7 @@ The objective of `PS1` is to familiarize students with computing the prices of T
 * [Malkiel, B. G. (1962). Expectations, Bond Prices, and the Term Structure of Interest Rates. The Quarterly Journal of Economics, 76(2), 197–218. https://doi.org/10.2307/1880816](https://www.jstor.org/stable/1880816https://www.jstor.org/stable/1880816)
 
 Malkiel proposed five theorems that govern the price of fixed-income debt securities, e.g., Treasury Bills, Notes, and Bonds, as a function of the duration and yield values. In `PS1`, let's simulate Theorem 5:
-> The higher the coupon carried by the bond, the smaller the percentage price fluctuation for a given change in yield
+> Theorem 5: The higher the coupon carried by the bond, the smaller the percentage price fluctuation for a given change in yield
 
 ### Team
 List the members of your team here.
