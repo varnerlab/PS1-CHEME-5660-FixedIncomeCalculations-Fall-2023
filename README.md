@@ -32,7 +32,7 @@ This will run the `main(...)` method in the `Submit.jl` file, and spit out a tab
 * Your job is to complete the implementation of the `main(...)` method in the `Submit.jl` file and analyze the simulation results. 
 
 ### Expected results
-The code _should_ produce a `3`$\times$`3` grid of percentage change values for the bond price for $\pm~20$-percent changes in the coupon rate (rows) and yield (columns). Your results should look __something__ like the following (your numbers may be different):
+Your code _should_ produce a `3`$\times$`3` grid of percentage change values for the bond price for $\pm~20$-percent changes in the coupon rate (rows) and yield (columns). Your results should look __something__ like the following (your numbers may be different):
 
 |                | -20% yield | nominal yield | +20% yield |
 |----------------|------------|---------------|------------|
