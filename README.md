@@ -13,7 +13,9 @@ Malkiel proposed five theorems that govern the price of fixed-income debt securi
 We selected a `T = 30-year` United States Treasury bond that was auctioned off on `08/10/23` and issued on `08/15/2023` to test Theorem 5. The bond had the following characteristics:
 * The `T = 30-year` bond has an interest rate of `0.04125`, a yield of `0.04189`, and a price per $100 face value of `98.912672`.
 
-Simulate the bond price for the next for $\pm~20$-percent changes in the coupon rate and yield. Does the simulation support Theorem 5? Put your analysis results here.
+Simulate the bond price for the next for $\pm~20$-percent changes in the coupon rate and yield. Does the simulation support Theorem 5? 
+
+> Simulations support Thm 5. Compare the percentage change values of the +20% yield for the low and high coupon rates with the nominal case. When the yield increases for a low coupon rate, you get -25.8%, but for the same increase in yield for a high coupon rate, you get -0.1%. The percentage change in the bond price is much smaller for the high coupon rate than for the low coupon rate.
 
 ## Implementation
 The simulation implementation is in the `main(...)` function in the `Submit.jl` file. To execute the simulation, Start `Julia` from the command line in a VSCode terminal window (in the directory where the `Submit.jl` file is located):
